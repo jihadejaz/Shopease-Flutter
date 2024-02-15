@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopease/pages/Auth/login.dart';
 import 'package:shopease/pages/splash.dart';
 import 'package:shopease/pages/welcome.dart';
 
@@ -15,7 +16,7 @@ class ShopEase extends StatelessWidget {
       initialRoute: '/',
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => SplashScreen(),
+        '/': (context) => LoginPage(),
         'welcome': (context) => WelcomePage()
       },
     );

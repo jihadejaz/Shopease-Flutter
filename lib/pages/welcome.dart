@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopease/constants/colours.dart';
 import 'package:shopease/constants/images.dart';
+import 'package:shopease/pages/Auth/login.dart';
 import 'package:shopease/pages/Auth/signup.dart';
 import 'package:shopease/utils/app_utils.dart';
 
@@ -46,24 +47,8 @@ class WelcomePage extends StatelessWidget {
             height: getScreenHeight(context) * 0.1,
             child: ElevatedButton(
                 onPressed: () {
-                  goToPageAndRemove(SignUpPage(), context);
+                  goToPage(LoginPage(), context);
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColours.primaryColour,
-                  foregroundColor: AppColours.textColours,
-                ),
-                child: Text(
-                  'Create an Account',
-                  style: TextStyle(
-                    fontSize: getScreenWidth(context) * 0.05,
-                  ),
-                )),
-          ),
-          SizedBox(
-            width: double.infinity,
-            height: getScreenHeight(context) * 0.1,
-            child: ElevatedButton(
-                onPressed: () {},
                 style: OutlinedButton.styleFrom(
                     side: BorderSide(
                   color: AppColours.textColours,
