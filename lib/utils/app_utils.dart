@@ -1,28 +1,41 @@
 import 'package:flutter/material.dart';
 
-// FOR WIDTH
 
-double getScreenWidth(BuildContext context) {
+// -- FUNCTION TO GET CURRENT SCREEN WIDTH
+double getScreenWidth( BuildContext context ){
+
   return MediaQuery.of(context).size.width;
 }
-// FOR HEIGHT
 
-double getScreenHeight(BuildContext context) {
+
+// -- FUNCTION TO GET CURRENT SCREEN HEIGHT
+double getScreenHeight( BuildContext context ){
+
   return MediaQuery.of(context).size.height;
-}
 
-// FUNCTION TO NAVIGATE TO OTHER SCREEN AND GET BACK
-
-void goToPage(Widget page, BuildContext context){
-Navigator.push(context, MaterialPageRoute(builder: (context) => page,));
 }
 
 
-void goToPageAndRemove(Widget page, BuildContext context){
-Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => page,));
+
+
+// -- FUNCTION TO NAVIGATE TO ANOTHER SCREEN
+void gotoPage( Widget page,  BuildContext context){
+
+  Navigator.push(context,  MaterialPageRoute(builder: (context) => page,) );
 }
 
 
-void goToPageAndRemoveAll(Widget page, BuildContext context){
-Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => page,), (route) => false);
+
+// -- FUNCTION TO NAVIGATE TO ANOTHER SCREEN AND REMOVE PREVIOUS SCREEN
+void gotoPageAndRemove( Widget page,  BuildContext context){
+
+  Navigator.pushReplacement(context,  MaterialPageRoute(builder: (context) => page,) );
+}
+
+
+
+// -- FUNCTION TO NAVIGATE TO ANOTHER SCREEN AND REMOVE ALL OTHER SCREENS
+void gotoPageAndRemoveAll( Widget page,  BuildContext context){
+  
+  Navigator.pushAndRemoveUntil(context,  MaterialPageRoute(builder: (context) => page,) ,  (route)=>false  );
 }
